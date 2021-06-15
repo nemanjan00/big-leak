@@ -1,5 +1,7 @@
 # big-leak
 
+[![Build Status](https://travis-ci.org/nemanjan00/big-leak.svg?branch=master)](https://travis-ci.org/nemanjan00/big-leak)
+
 [Leaky bucket](https://en.wikipedia.org/wiki/Leaky_bucket) implementation
 
 ## Table of contents
