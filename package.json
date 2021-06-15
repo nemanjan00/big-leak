@@ -1,0 +1,10 @@
+{
+  "name": "big-leak",
+  "version": "0.0.0",
+  "description": "Leaky bucket implementation",
+  "main": "index.js",
+  "repository": "git@github.com:nemanjan00/big-leak.git",
+  "author": "nemanjan00 <nemanjan00@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
