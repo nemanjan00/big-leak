@@ -33,6 +33,19 @@ yarn add big-leak
 ## Usage
 
 ```javascript
+const limiter = require("big-leak")({
+	prefix: "leaky-bucket:"
+});
+
+const limit = limiter.limit("send-request", 123);
+
+const sendRequest = limit.wrapper((url) => {
+	console.log("Sending request");
+
+	return Promise.resolve();
+});
+
+Array(50).fill(true).reduce((prev) => prev.then(sendRequest), Promise.resolve());
 ```
 
 ## Authors
