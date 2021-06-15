@@ -3,6 +3,15 @@
   "version": "0.0.1",
   "description": "Leaky bucket implementation",
   "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha --reporter spec --timeout 60000 tests/index.js",
+    "lint": "./dev/lint.sh"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
   "repository": "git@github.com:nemanjan00/big-leak.git",
   "author": "nemanjan00 <nemanjan00@gmail.com>",
   "license": "MIT",
