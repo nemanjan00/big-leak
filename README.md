@@ -1,4 +1,4 @@
-# big-leak
+# big-leak 🌊
 
 [![Build Status](https://travis-ci.org/nemanjan00/big-leak.svg?branch=master)](https://travis-ci.org/nemanjan00/big-leak)
 
