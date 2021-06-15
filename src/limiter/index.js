@@ -5,7 +5,7 @@ const defaultOptions = {
 	url: "memory://",
 	prefix: "leaky:",
 	delimiter: ":",
-	initialValue: 1,
+	initialValue: 0,
 	refillTime: 24 * 60 * 60 * 1000, // 1-day
 	refillAmount: 20,
 	updateType: "float"
