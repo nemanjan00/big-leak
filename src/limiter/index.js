@@ -6,6 +6,7 @@ const defaultOptions = {
 	prefix: "leaky:",
 	delimiter: ":",
 	initialValue: 0,
+	maxValue: 20,
 	refillTime: 24 * 60 * 60 * 1000, // 1-day
 	refillAmount: 20,
 	updateType: "float"

@@ -34,7 +34,14 @@ yarn add big-leak
 
 ```javascript
 const limiter = require("big-leak")({
-	prefix: "leaky-bucket:"
+	url: "memory://", // Dataman connection url
+	prefix: "leaky:", // Redis key prefix
+	delimiter: ":", // Redix key delimiter
+	initialValue: 0, // How full do you want bucket to be?
+	maxValue: 20, // How much do you want bucket to be able to fill up?
+	refillTime: 24 * 60 * 60 * 1000, // 1-day - how often should bucket be filled up
+	refillAmount: 20, // How much should bucket be refilled each refill time
+	updateType: "float" // Do you want to refill bucket less thatn refillAmount?
 });
 
 const limit = limiter.limit("send-request", 123);

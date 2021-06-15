@@ -31,7 +31,7 @@ module.exports = (bucketOptions) => {
 
 			const newTime = Math.floor(realRefillPending * options.refillTime + options.lastUpdate);
 
-			options.value = newValue;
+			options.value = Math.max(newValue, options.maxValue);
 			options.lastUpdate = newTime;
 
 			return options;
