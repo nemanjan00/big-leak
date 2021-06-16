@@ -1,3 +1,3 @@
-const limiter = require("./limiter")();
+const limiter = require("./limiter");
 
 module.exports = limiter;
