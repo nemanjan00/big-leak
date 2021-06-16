@@ -21,7 +21,7 @@ module.exports = (options, storage, ...args) => {
 						value: limit._options.initialValue,
 						refillTime: limit._options.refillTime,
 						refillAmount: limit._options.refillAmount,
-						lastUpdate: Date.now() - 100 * 1000 * 1000,
+						lastUpdate: Date.now(),
 						updateType: limit._options.updateType
 					};
 				}
