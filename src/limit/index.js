@@ -30,7 +30,7 @@ module.exports = (options, storage, ...args) => {
 					bucketOptions = defaultBucketOptions;
 				}
 
-				Object.assign(bucketOptions, defaultBucketOptions);
+				bucketOptions = Object.assign({}, defaultBucketOptions, bucketOptions);
 
 				Object.keys(bucketOptions).forEach(propName => {
 					if(!isNaN(bucketOptions[propName])) {
