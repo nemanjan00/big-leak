@@ -16,17 +16,21 @@ module.exports = (options, storage, ...args) => {
 
 		getStatus: () => {
 			return limit._storage.hash.get(limit._namespace).then(bucketOptions => {
+				const defaultBucketOptions = {
+					value: limit._options.initialValue,
+					refillTime: limit._options.refillTime,
+					refillAmount: limit._options.refillAmount,
+					lastUpdate: Date.now(),
+					updateType: limit._options.updateType,
+					maxValue: limit._options.maxValue,
+					updateType: limit._options.updateType
+				};
+
 				if(!bucketOptions) {
-					bucketOptions = {
-						value: limit._options.initialValue,
-						refillTime: limit._options.refillTime,
-						refillAmount: limit._options.refillAmount,
-						lastUpdate: Date.now(),
-						updateType: limit._options.updateType,
-						maxValue: limit._options.maxValue,
-						updateType: limit._options.updateType
-					};
+					bucketOptions = defaultBucketOptions;
 				}
+
+				Object.assign(bucketOptions, defaultBucketOptions);
 
 				Object.keys(bucketOptions).forEach(propName => {
 					if(!isNaN(bucketOptions[propName])) {
